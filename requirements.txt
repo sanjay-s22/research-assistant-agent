@@ -3,6 +3,7 @@ langchain
 langchain-core
 langch
 langchain-google-genai
+langchain-groq
 fastapi
 uvicorn
 python-dotenv
