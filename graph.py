@@ -33,14 +33,23 @@ graph.add_edge('search', 'researcher')
 graph.add_edge('researcher', 'reviewer')
 
 def review_router(state: ResearchState):
+
+    ''' print("\nReview Router:")
+     print(f"Approved: {state['approved']}")
+     print(f"Iterations: {state.get('research_iterations', 0)}")'''   #debug
+
     if state['approved']:
         return 'writer'
-    return 'search'
+
+    if state.get('research_iterations',0)>=2:
+       return 'writer'
+    
+    return 'planner'
 
 graph.add_conditional_edges('reviewer', review_router,
 {
     'writer' : 'writer',
-    'search': 'search'
+    'planner': 'planner'
 }
 )
 graph.add_edge('writer',END)
