@@ -2,12 +2,14 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from graph import research_graph
 from fastapi.middleware.cors import CORSMiddleware
+import os
+
 
 app = FastAPI (title = "Research Assistant Agent")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=["http://localhost:5173",os.getenv('FRONTEND_URL')],
     allow_methods=["*"],
     allow_headers=["*"],
 )
