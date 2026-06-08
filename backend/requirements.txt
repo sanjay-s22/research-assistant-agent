@@ -1,8 +1,7 @@
 langgraph
 langchain
 langchain-core
-langch
-langchain-google-genai
+langchain-community
 langchain-groq
 fastapi
 uvicorn

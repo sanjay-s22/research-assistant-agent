@@ -4,7 +4,7 @@ from state import ResearchState
 
 search_tool = DuckDuckGoSearchResults(
     output_format="list",
-    max_results=10
+    max_results=7
 )
 
 
@@ -70,7 +70,7 @@ def search_agent(state: ResearchState):
             all_results.append(
                 {
                     "task": task,
-                    "results": filtered_results[:7]
+                    "results": filtered_results[:4]
                 }
             )
 
