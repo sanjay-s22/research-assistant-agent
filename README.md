@@ -208,6 +208,3 @@ Content-Type: application/json
 
 Backend on Render, frontend on Vercel.
 
-Render — root directory: `backend/`, start command: `uvicorn main:app --host 0.0.0.0 --port 8000`
-
-Vercel — root directory: `frontend/`, env var: `VITE_API_URL=https://research-assistant-agent-pw3h.onrender.com`
